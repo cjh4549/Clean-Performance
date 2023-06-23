@@ -393,7 +393,7 @@ fieldset {
 .navbar__items li {
   margin-left: 3rem;
   font-size: calc(
-    20px + (20 - 20) *
+    16px + (16 - 16) *
       ((100vw - 800px) / (1600 - 800))
   );
 }
@@ -406,6 +406,8 @@ fieldset {
 .entireBgCover::before {
   content: "";
   background-image: url("../../../assets/marbleTile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
@@ -1398,9 +1400,23 @@ fieldset {
   .form .btn {
     width: 100%;
   }
+  .list__block--container:hover::before {
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+    background-image: none;
+  }
+  .navbar__items li {
+    font-size: 2rem;
+  }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .navbar__logo {
+    width: 15rem;
+  }
   .about__hero--right {
     display: none;
   }

@@ -350,10 +350,27 @@
   .form .btn {
     width: 100%;
   }
+
+  .list__block--container:hover::before {
+    backdrop-filter: blur(0);
+    background-image: none;
+  }
+
+  .navbar__items li {
+    font-size: 2rem;
+  }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .navbar__logo {
+    width: 15rem;
+  }
+
   .about__hero--right {
     display: none;
   }

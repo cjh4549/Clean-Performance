@@ -17,7 +17,7 @@
 
     & li {
       margin-left: 3rem;
-      @include fluidFS(20, 20, 800);
+      @include fluidFS(16, 16, 800);
     }
   }
 

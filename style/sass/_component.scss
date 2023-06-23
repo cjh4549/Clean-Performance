@@ -1,0 +1,57 @@
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+  font-size: 2rem;
+}
+
+.skip-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wrapper {
+  @include wrapper
+}
+
+.btn,
+.btn:visited {
+  background-color: $yellow;
+  border: none;
+  font-size: 1.6rem;
+  transition: all 0.2s;
+  display: flex;
+  padding: 1.2rem 4.4rem;
+  width: 40%;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  }
+
+  & > span {
+    margin: 0 auto;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: $white;
+}
+
+.circle {
+  position: absolute;
+}

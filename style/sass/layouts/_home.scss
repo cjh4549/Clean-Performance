@@ -1,0 +1,445 @@
+.entireBgCover {
+  &::before {
+    content: "";
+    background-image: url("../../../assets/marbleTile.jpg");
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    opacity: 0.2;
+    z-index: -1;
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5rem;
+  padding: 11rem 0 8rem 0;
+
+  &__text {
+    position: relative;
+
+    .circle {
+      top: -25%;
+      right: 30%;
+      z-index: -2;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .button-container {
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__cover {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    &--image {
+      object-fit: cover;
+      width: 100%;
+      height: 45rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.list {
+  position: relative;
+  margin-top: 10rem;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+      ),
+      url("../../../assets/downtownToronto.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__block {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 14rem 5% 14rem 5%;
+
+    &--container {
+      display: flex;
+      position: relative;
+
+      &:hover::before {
+        content: "";
+        position: absolute;
+        left: -20%;
+        top: -25%;
+        width: 120vw;
+        height: 150%;
+        backdrop-filter: blur(4px);
+        background-image: linear-gradient(
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.15)
+        );
+      }
+
+      .list__block--container:hover::before {
+        overflow: hidden;
+      }
+
+      p {
+        color: $white;
+        opacity: 0.7;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 5rem;
+      }
+
+      .left-text {
+        width: 20%;
+
+        p {
+          font-size: 3rem;
+          font-weight: bold;
+          line-height: 4.5rem;
+        }
+      }
+
+      .right-text {
+        width: 80%;
+      }
+
+      div:first-child {
+        margin-right: 5%;
+      }
+
+      .static-bg {
+        opacity: 0;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: -4%;
+          top: 0;
+          width: 2px;
+          height: 100%;
+          background-color: $white;
+          opacity: 0.6;
+        }
+      }
+
+      .mouseOverEffect {
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+.showcase {
+  padding: 15rem 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+
+  &__title {
+    position: relative;
+    width: 30%;
+    margin-bottom: 8rem;
+  }
+
+  .circle {
+    top: -120%;
+    right: -20%;
+    z-index: -2;
+  }
+
+  &__body {
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url("../../../assets/construction.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 30%;
+      left: -10%;
+      width: 50%;
+      height: 50%;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    &::after {
+      content: "";
+      background-image: url("../../../assets/blueprint.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 10%;
+      right: 0%;
+      width: 50%;
+      height: 50%;
+      z-index: -1;
+      opacity: 0.7;
+    }
+
+    img {
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .first-row {
+      display: flex;
+      gap: 5%;
+      align-items: center;
+
+      img:first-child {
+        width: 25%;
+        height: 15%;
+      }
+
+      img:last-child {
+        width: 25%;
+      }
+    }
+
+    .second-row {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 5%;
+      margin-top: 5rem;
+      padding-right: 20%;
+      align-items: center;
+
+      img:first-child {
+        width: 15%;
+        height: 20%;
+      }
+
+      img:last-child {
+        width: 35%;
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 50%;
+    margin-top: -4rem;
+    z-index: 10;
+  }
+}
+
+.cert {
+  padding: 13rem 0;
+  background-color: $white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 40%;
+    background-color: $black;
+    opacity: 0.2;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 5rem;
+
+      a {
+        width: 50%;
+      }
+    }
+  }
+
+  &__ic {
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 50%;
+        height: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  padding: 15rem 0;
+
+  &::before {
+    content: "";
+    background-image: url("../../../assets/living3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+  }
+
+  &__container {
+    background-color: $white;
+    padding: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--text {
+      text-align: center;
+
+      h2 {
+        position: relative;
+        width: 80%;
+        margin: 0 auto 5rem auto;
+        z-index: 2;
+
+        .circle {
+          top: -50%;
+          left: -5%;
+          z-index: -1;
+        }
+      }
+
+      p {
+        opacity: 0.6;
+      }
+    }
+
+    &--btn {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      margin-top: 5rem;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  padding: 10rem 0;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  &__left {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--logo {
+      width: 100%;
+      margin-bottom: 2.5rem;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    &--address {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
+
+    &--contact {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p:first-child {
+      font-weight: 500;
+    }
+
+    p:not(:first-child) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2%;
+
+    .footer__items {
+      font-size: 1.5rem;
+
+      li {
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    &--company {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

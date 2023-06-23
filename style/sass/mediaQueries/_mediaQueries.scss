@@ -1,0 +1,399 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 992px) {
+  //HOME PAGE
+  h1 {
+    font-size: 5.4rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  .navbar__btn {
+    display: none;
+  }
+
+  section {
+    padding: 10rem 0 !important;
+
+    &.hero {
+      padding-bottom: 0 !important;
+    }
+
+    &.list {
+      margin-top: 0;
+      padding: 0 !important;
+    }
+  }
+
+  .list__block--container:not(:last-child) {
+    margin-bottom: 10rem;
+  }
+
+  .button-container,
+  .showcase__btn,
+  .cert__title__btn,
+  .contact__container--btn {
+    a {
+      width: 100%;
+    }
+  }
+
+  .cert__title__btn {
+    display: none;
+  }
+
+  .showcase__btn {
+    margin-top: 5rem;
+  }
+
+  .list__block--container {
+    flex-direction: column;
+
+    .right-text {
+      margin-top: 2rem;
+    }
+  }
+
+  .cert::before {
+    display: none;
+  }
+
+  .cert__title,
+  .cert__ic {
+    width: 50%;
+  }
+
+  .contact__container {
+    padding: 10%;
+  }
+
+  .footer {
+    padding: 5rem 0;
+
+    .wrapper {
+      display: block;
+    }
+
+    &__left {
+      &--logo {
+        width: 30rem;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__right {
+      margin-top: 5rem;
+      width: 100%;
+      gap: 15%;
+    }
+  }
+
+  //PROJECTS
+  .projects__gallery {
+    padding-top: 0 !important;
+  }
+
+  .projects__description--btn {
+    margin-bottom: 0;
+  }
+
+  //ABOUT US
+  .about__hero--left {
+    width: 100%;
+  }
+
+  .about__hero--right {
+    position: absolute;
+    opacity: 0.2;
+    z-index: -1;
+    top: 10%;
+
+    & > img {
+      visibility: hidden;
+    }
+  }
+
+  .team .wrapper {
+    gap: 5%;
+  }
+
+  .iicrc__container {
+    grid-template-columns: repeat(2, 1fr);
+
+    li {
+      margin: 0 auto;
+    }
+  }
+
+  //CONTACT
+  .contactPage {
+    padding-top: 0;
+
+    &__container {
+      width: 100%;
+      padding: 5% 0;
+    }
+
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .form {
+      width: 100%;
+      margin-left: 0%;
+    }
+  }
+
+  .contactPage .contact__container h2 {
+    width: 100%;
+    left: 0;
+  }
+
+  .contactPage .contact__container {
+    padding: 15% 10%;
+  }
+
+  .contactPage .contact__container p {
+    left: 0;
+  }
+
+  .contact__container--text {
+    text-align: left;
+  }
+
+  .contactPage .contact__container .contact__character {
+    right: 0%;
+    top: -50%;
+  }
+
+  .contactPage .contact__container .contact__character img {
+    height: 50vw;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+
+    &__items {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      background-color: $black;
+      text-align: center;
+      transition: 0.3s;
+      opacity: 0.9;
+
+      &.active {
+        top: 0;
+        height: 100vh;
+        z-index: 1000;
+
+        li a {
+          color: $yellow;
+        }
+      }
+
+      & li {
+        margin: 1.5rem;
+      }
+    }
+
+    &__btn {
+      display: none;
+    }
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+
+    .bar {
+      background-color: $yellow;
+    }
+
+    &.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    &.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  h2,
+  .showcase__title {
+    width: 100%;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .showcase__body .second-row {
+    flex-direction: row;
+  }
+
+  .cert .wrapper {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 8rem 0 !important;
+  }
+
+  .cert__ic {
+    margin-top: 5rem;
+  }
+
+  .contact__container--text h2 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .projects__hero {
+    width: 100%;
+  }
+
+  .contact__container--btn,
+  .projects__description--btn a {
+    width: 100%;
+  }
+
+  .about__hero--left .about__btn a {
+    width: 100%;
+  }
+
+  .iicrc__container--img {
+    height: 30vw;
+  }
+
+  .contact__container {
+    padding: 15%;
+  }
+
+  .footer__right {
+    flex-direction: column;
+
+    div:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .footer__left {
+    width: 100%;
+  }
+
+  .footer__items {
+    display: flex;
+
+    li:not(:last-child) {
+      margin-right: 5%;
+    }
+  }
+
+  .team__left .workerContainer {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 20%;
+
+    img {
+      height: 45vw;
+      right: 30%;
+      top: -100%;
+    }
+  }
+
+  .list__block--container .left-text,
+  .list__block--container .right-text {
+    width: 100%;
+  }
+
+  .showcase__body .first-row img:first-child {
+    width: 40%;
+  }
+
+  .showcase__body .first-row img:last-child {
+    width: 30%;
+  }
+
+  .showcase__body .second-row img:first-child {
+    width: 30%;
+  }
+
+  .showcase__body .second-row img:last-child {
+    width: 40%;
+  }
+
+  .contactPage .form fieldset textarea {
+    height: 20vh;
+  }
+
+  .form .btn {
+    width: 100%;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .about__hero--right {
+    display: none;
+  }
+
+  .iicrc__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .footer__items li:not(:last-child) {
+    width: 100%;
+  }
+
+  .team__left .workerContainer img {
+    top: 0%;
+  }
+
+  .showcase__btn {
+    width: 100%;
+  }
+
+  .cert__title,
+  .cert__ic {
+    width: 100%;
+  }
+
+  .footer__items {
+    flex-direction: column;
+  }
+
+  .contactPage .contact__container .contact__character {
+    top: -30%;
+  }
+
+  .contactPage__container {
+    padding: 15% 0;
+  }
+}
